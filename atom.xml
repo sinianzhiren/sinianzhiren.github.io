@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sinianzhiren.github.io/"/>
-  <updated>2019-07-18T05:03:11.042Z</updated>
+  <updated>2019-07-18T05:13:16.741Z</updated>
   <id>https://sinianzhiren.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sinianzhiren.github.io/2019/07/17/vue-start/"/>
     <id>https://sinianzhiren.github.io/2019/07/17/vue-start/</id>
     <published>2019-07-17T05:32:50.000Z</published>
-    <updated>2019-07-18T05:03:11.042Z</updated>
+    <updated>2019-07-18T05:13:16.741Z</updated>
     
     <content type="html"><![CDATA[<h2 id="component坑"><a href="#component坑" class="headerlink" title="component坑"></a>component坑</h2><p><img src="http://hexo-blog.yun168.xin/create_hexo-blog/img/vue/error/error-1.png" alt="报错1"></p><blockquote><ul><li>上面的错误是由于我们在定义组件的时候使用的是 selfComponent 名字，但是引入的时候需要用横线代替驼峰命名</li><li>解决办法：</li><li>将html中的标签 selfComponent 改写为 self-component</li><li>后续如果遇到类似的错误可以参考上面的方法修改</li></ul></blockquote><p><img src="http://hexo-blog.yun168.xin/create_hexo-blog/img/vue/error/error-2.png" alt="报错2"></p><blockquote><ul><li>由于组件与html的标签名字有冲突导致<br>待续</li></ul></blockquote><p><img src="http://hexo-blog.yun168.xin/create_hexo-blog/img/vue/error/error-3.png" alt="报错3"></p><blockquote><ul><li>在父组件传递给子组件自定义props的时候，由于组件的属性名写为 headerMsg 导致报错，</li><li>需写为header-msg 然后在子组件的props中获取的key是：headerMsg</li></ul></blockquote>]]></content>
     
@@ -34,7 +34,9 @@
     
     </summary>
     
-      <category term="vue" scheme="https://sinianzhiren.github.io/categories/vue/"/>
+      <category term="前端" scheme="https://sinianzhiren.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="vue" scheme="https://sinianzhiren.github.io/categories/%E5%89%8D%E7%AB%AF/vue/"/>
     
     
       <category term="组件" scheme="https://sinianzhiren.github.io/tags/%E7%BB%84%E4%BB%B6/"/>
