@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sinianzhiren.github.io/"/>
-  <updated>2019-07-18T05:13:16.741Z</updated>
+  <updated>2019-07-20T08:31:25.349Z</updated>
   <id>https://sinianzhiren.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>less的学习</title>
+    <link href="https://sinianzhiren.github.io/2019/07/20/less/"/>
+    <id>https://sinianzhiren.github.io/2019/07/20/less/</id>
+    <published>2019-07-20T05:32:50.000Z</published>
+    <updated>2019-07-20T08:31:25.349Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="less笔记"><a href="#less笔记" class="headerlink" title="less笔记"></a>less笔记</h3><blockquote><ol><li><strong>变量</strong> <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@color:</span> blue;</span><br></pre></td></tr></table></figure></li></ol></blockquote><ol start="2"><li><p><strong>mixin</strong><br> <em>将相同的代码分离出来通过函数参数的方式改变对应的值</em></p> <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.common</span>(<span class="variable">@font_size</span>, <span class="variable">@color</span>)&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="variable">@font_size</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p><strong>extend</strong><br> <em>将相同的代码分离出来，通过extend去扩展，可以使得编译后的css文件少一点</em></p> <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.common</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div1</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:extend(.common)</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div2</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:extend(.common)</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">500</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p><strong>循环(loop)</strong><br> <em>循环的输出class类名，适用于在做响应式布局使用, 该方式是采用循环递归调用自身</em></p> <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.gen-col</span>(<span class="variable">@n</span>) <span class="keyword">when</span> (<span class="variable">@n</span> &gt; <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="selector-class">.gen-col</span>(<span class="variable">@n</span> - <span class="number">1</span>);</span><br><span class="line">    <span class="selector-class">.col-</span><span class="variable">@&#123;n&#125;</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">1000px</span> / <span class="number">12</span>*<span class="variable">@n</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.gen-col</span>(<span class="number">12</span>);</span><br></pre></td></tr></table></figure></li><li><p><strong>@import</strong><br> <em>less中的import与css不一样之处是css中的import会需要加载多份，less中的import会编译后将所有需要import代码放到一个文件中，降低http请求数</em></p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;./footer&quot;;</span><br></pre></td></tr></table></figure></li><li><p><strong>less预处理框架的解决方案</strong><br> <a href="ecomfe.github.io/est/#top"><em>est</em></a></p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;less笔记&quot;&gt;&lt;a href=&quot;#less笔记&quot; class=&quot;headerlink&quot; title=&quot;less笔记&quot;&gt;&lt;/a&gt;less笔记&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;变量&lt;/strong&gt; &lt;figure class=&quot;
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://sinianzhiren.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://sinianzhiren.github.io/categories/%E5%89%8D%E7%AB%AF/css/"/>
+    
+    
+      <category term="less" scheme="https://sinianzhiren.github.io/tags/less/"/>
+    
+  </entry>
   
   <entry>
     <title>vue 填坑知识(-)</title>
